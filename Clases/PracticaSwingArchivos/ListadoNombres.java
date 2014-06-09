@@ -9,7 +9,7 @@ public class ListadoNombres {
 		lista.add(nombre);
 	}
 	public String imprimir(){
-		String resultado =null;
+		String resultado ="";
 		if (!lista.isEmpty()){
 			for (Nombres nombres : lista) {
 				resultado+=nombres.getNombre() + "\n";
