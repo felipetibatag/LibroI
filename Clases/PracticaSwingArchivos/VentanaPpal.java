@@ -3,10 +3,12 @@ package PracticaSwingArchivos;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.Panel;
 
+import javax.swing.Box;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -42,12 +44,15 @@ public class VentanaPpal extends JFrame{
 	}
 	public Panel pSur(){
 		Panel pSur=new Panel();
+		
 		bGuardar.addActionListener(new EventosNombres(this));
 		bImprimir.addActionListener(new EventosNombres(this));
 		bSalir.addActionListener(new EventosNombres(this));
 		pSur.setLayout(new GridLayout(1,3));
 		pSur.add(bGuardar);
+		//pSur.add(Box.createRigidArea(new Dimension(0,1)));
 		pSur.add(bImprimir);
+		//pSur.add(Box.createRigidArea(new Dimension(0,1)));
 		pSur.add(bSalir);
 		
 		return pSur;
