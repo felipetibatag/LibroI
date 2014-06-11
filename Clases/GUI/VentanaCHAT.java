@@ -2,6 +2,7 @@ package GUI;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -36,6 +37,7 @@ public class VentanaCHAT extends JFrame implements ActionListener{
 		gbc.weightx=1.0; //que tanto (cantidad)crece cuando se expande la ventana
 		gbc.weighty=1.0; //que tanto (cantidad)crece cuando se expande la ventana
 		gbc.fill=GridBagConstraints.BOTH; // la forma en la que crece horizontal, vertical, ambos, etc.
+		gbc.insets=new Insets(5,5,0,5);
 		add(scroll,gbc);
 		
 		gbc.gridx=0;
@@ -45,6 +47,7 @@ public class VentanaCHAT extends JFrame implements ActionListener{
 		gbc.weightx=1.0;
 		gbc.weighty=0.0;
 		gbc.fill=GridBagConstraints.HORIZONTAL;
+		gbc.insets=new Insets(0,5, 0, 5);
 		add(text,gbc);
 		
 		gbc.gridx=1;
@@ -54,6 +57,7 @@ public class VentanaCHAT extends JFrame implements ActionListener{
 		gbc.weightx=0.0;
 		gbc.weighty=0.0;
 		gbc.fill=GridBagConstraints.NONE;
+		gbc.insets=new Insets(5,0, 5, 5);
 		add(boton,gbc);
 		
 		boton.addActionListener(this);
