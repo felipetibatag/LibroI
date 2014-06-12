@@ -12,8 +12,8 @@ import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
 public class VentanaEmpleado extends JFrame{
-	JLabel lNombre=new JLabel("Nombre");
-	JLabel lCedula=new JLabel("Cedula");
+	JLabel lNombre=new JLabel("Nombre",JLabel.RIGHT);
+	JLabel lCedula=new JLabel("Cedula",JLabel.RIGHT);
 	JLabel lTitulo=new JLabel("Registro Empleado");
 	JTextField tNombre=new JTextField(10);
 	JTextField tCedula=new JTextField(10);
@@ -25,7 +25,7 @@ public class VentanaEmpleado extends JFrame{
 	public VentanaEmpleado() {
 		// TODO Auto-generated constructor stub
 		Container contenedor=getContentPane();
-		this.setLayout(new GridBagLayout());
+		contenedor.setLayout(new GridBagLayout());
 		gbc.gridx=0;
 		gbc.gridy=0;
 		gbc.gridheight=1;
@@ -68,11 +68,21 @@ public class VentanaEmpleado extends JFrame{
 		gbc.gridx=1;
 		gbc.gridy=2;
 		gbc.gridheight=1;
-		gbc.gridwidth=1;
+		gbc.gridwidth=GridBagConstraints.RELATIVE;
 		gbc.weightx=1.0;
 		gbc.weighty=0.0;
 		gbc.fill=GridBagConstraints.HORIZONTAL;
 		contenedor.add(tCedula,gbc);
+		
+		gbc.gridx=2;
+		gbc.gridy=3;
+		gbc.gridheight=GridBagConstraints.REMAINDER;
+		gbc.gridwidth=1;
+		gbc.weightx=0.0;
+		gbc.weighty=1.0;
+		gbc.anchor=GridBagConstraints.FIRST_LINE_END;
+		gbc.fill=GridBagConstraints.NONE;
+		contenedor.add(bGuardar,gbc);
 		
 		
 		
