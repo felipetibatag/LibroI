@@ -59,8 +59,8 @@ public class PracticaGui1 extends JFrame{
 		gbc.weighty=0.0;
 		gbc.anchor=GridBagConstraints.FIRST_LINE_START;
 		gbc.fill=GridBagConstraints.HORIZONTAL;
-		
-		gbc.insets=new Insets(0, 5, 5, 5);
+		//gbc.ipadx=gbc.ipady=50;
+		gbc.insets=new Insets(10, 10, 10, 10);
 		contenedor.add(opcPanel,gbc);
 		
 		
@@ -70,6 +70,7 @@ public class PracticaGui1 extends JFrame{
 		gbc.gridwidth=4;
 		gbc.weightx=1.0;
 		gbc.weighty=1.0;
+		gbc.insets=new Insets(0, 0, 10, 10);	
 		gbc.fill=GridBagConstraints.BOTH;
 		gbc.anchor=GridBagConstraints.PAGE_START;
 		contenedor.add(imagen,gbc);
